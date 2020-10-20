@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../fonts/SFProDisplay-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "SF Pro Display", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 16px 0;
+  background-color: #fa8c16;
+}
+
+.header__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo {
+  margin-right: 58px;
+}
+
+.header__logo a img {
+  display: block;
+}
+
+.header__navigation {
+  margin-right: auto;
+}
+
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.header__menu-item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.header__menu-link {
+  color: #fafafa;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.header__search {
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+}
+
+.header__search-input {
+  width: 206px;
+  padding: 4px 0 4px 11px;
+  font-size: 14px;
+  line-height: 22px;
+  border-radius: 4px;
+  border: none;
+}
+
+.header__search-input::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+.header__search-input:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+.header__search-input::-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+.header__search-input::placeholder {
+  color: #bfbfbf;
+}
+
+.header__search-input:focus {
+  outline: none;
+}
+
+.header__search-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 7px;
+  background-color: #fff;
+  border: none;
+}
+
+.header__search-button:focus {
+  outline: 1px solid #bfbfbf;
+}

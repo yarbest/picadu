@@ -1,0 +1,84 @@
+$color-header: #fa8c16
+$color-header-text: #fafafa
+
+@font-face
+    font-family: "SF Pro Display"
+    src: url("../fonts/SFProDisplay-Regular.ttf")
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    font-family: "SF Pro Display", sans-serif
+
+.container
+    max-width: 1200px
+    margin: 0 auto
+
+.header
+    padding: 16px 0
+    background-color: $color-header
+    &__body
+        display: flex
+        align-items: center
+    &__logo
+        margin-right: 58px
+        a
+            img
+                display: block
+    &__navigation
+        margin-right: auto
+    &__menu
+        display: flex
+        list-style: none
+        &-item
+            &:not(:last-child)
+                margin-right: 15px
+        &-link
+            color: $color-header-text
+            text-decoration: none
+            font-size: 14px
+            line-height: 22px
+    &__search
+        border-radius: 4px
+        border: 1px solid #d9d9d9
+        display: flex
+        background-color: #fff
+        &-input
+            width: 206px
+            padding: 4px 0 4px 11px
+            font-size: 14px
+            line-height: 22px
+            border-radius: 4px
+            border: none
+            &::placeholder
+                color: #bfbfbf
+            &:focus
+                outline: none
+        &-button
+            display: inline-flex //что бы не занимал всю строку и не перелазил на другую строку
+            align-items: center //выровняли иконку
+            justify-content: center
+            padding: 0 7px
+            background-color: #fff
+            border: none
+            &:focus
+                outline: 1px solid #bfbfbf
+        &-icon
+ 
+@media (max-width: 1199px)
+    .header
+        &__body
+        &__logo
+            a
+                img
+        &__navigation
+        &__menu
+            &-item
+            &-link
+        &__search
+            &-input
+            &-button
+            &-icon

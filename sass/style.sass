@@ -1,5 +1,10 @@
 $color-header: #fa8c16
 $color-header-text: #fafafa
+$color-article-text: #262626
+$color-content-background: #f5f5f5
+$color-article-background: #ffffff
+$color-article-footer-background: #fafafa
+
 
 @font-face
     font-family: "SF Pro Display"
@@ -70,37 +75,59 @@ body
         &-icon
 
 .content
+    background-color: $color-content-background
     &__body
         display: flex
+        padding-top: 30px
         border: 1px solid #000
 
 .articles
+    // max-width: 800px
+    // border: 1px solid #000
 
 .article
+    background-color: $color-article-background
+    border: 1px solid blue
+
     &__header
         h1
+            color: $color-article-text
     &__text
         p
+            color: $color-article-text
     &__hashtags
         &-item
+
     &__footer
+        display: flex
+        justify-content: space-between
+        background-color: $color-article-footer-background
+        border: 1px solid red
     &__actions
+        display: flex
+        border: 1px solid #000
     &__author
+        border: 1px solid #000
         &-nickname
         &-lastseen
         &-image
 //actions и блок и элемент
 .actions
     &__likes
+        display: flex
         &-icon
         &-number
     &__comments
+        display: flex
         &-icon
         &-number
     &__save
     &__share
 
 .sidebar
+    flex-basis: 370px
+    margin-left: 30px
+    border: 1px solid
     &__navigation
     &__user
         &-image
@@ -110,6 +137,7 @@ body
         &-logout
             img
     &__menu
+        list-style: none
         &-item
         &-link
 

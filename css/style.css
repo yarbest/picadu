@@ -121,9 +121,72 @@ body {
   outline: 1px solid #bfbfbf;
 }
 
+.content {
+  background-color: #f5f5f5;
+}
+
 .content__body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 30px;
   border: 1px solid #000;
+}
+
+.article {
+  background-color: #ffffff;
+  border: 1px solid blue;
+}
+
+.article__header h1 {
+  color: #262626;
+}
+
+.article__text p {
+  color: #262626;
+}
+
+.article__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #fafafa;
+  border: 1px solid red;
+}
+
+.article__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #000;
+}
+
+.article__author {
+  border: 1px solid #000;
+}
+
+.actions__likes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.actions__comments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sidebar {
+  -ms-flex-preferred-size: 370px;
+      flex-basis: 370px;
+  margin-left: 30px;
+  border: 1px solid;
+}
+
+.sidebar__menu {
+  list-style: none;
 }

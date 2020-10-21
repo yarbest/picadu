@@ -69,7 +69,10 @@ body
                 outline: 1px solid #bfbfbf
         &-icon
 
-.wrapper
+.content
+    &__body
+        display: flex
+        border: 1px solid #000
 
 .articles
 
@@ -96,6 +99,38 @@ body
         &-number
     &__save
     &__share
+
+.sidebar
+    &__navigation
+    &__user
+        &-image
+            img
+        &-nickname
+            p
+        &-logout
+            img
+    &__menu
+        &-item
+        &-link
+
+    &__publish
+        &-icon
+            img
+        &-text
+            p
+    
+    &__bestcomment
+        &-header
+            h2
+        &-title
+            p
+        &-text
+            p
+
+    &__advert
+        &:any-link
+            img
+
 
 @media (max-width: 1199px)
     .header

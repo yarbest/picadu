@@ -639,8 +639,19 @@ body {
 }
 
 @media (max-width: 767px) {
+  .header__body {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header__logo {
+    margin: 0;
+  }
   .header__navigation {
     display: none;
+  }
+  .header__search {
+    width: 50%;
   }
 }
 

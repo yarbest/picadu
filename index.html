@@ -61,28 +61,47 @@
                                 </p>
                             </div>
                             <div class="article__hashtags">
-                                <div class="article__hashtags-item">#свежее</div>
-                                <div class="article__hashtags-item">#горячее</div>
-                                <div class="article__hashtags-item">#мое</div>
-                                <div class="article__hashtags-item">#случайность</div>
+                                <p class="article__hashtags-item">#свежее</p>
+                                <p class="article__hashtags-item">#горячее</p>
+                                <p class="article__hashtags-item">#мое</p>
+                                <p class="article__hashtags-item">#случайность</p>
                             </div>
                             <footer class="article__footer">
                                 <div class="article__actions actions">
-                                    <div class="actions__likes">
-                                        <div class="actions__likes-icon"><img src="img/icon_like.svg" alt="icon_like" /></div>
-                                        <div class="actions__likes-number"><p>26</p></div>
-                                    </div>
-                                    <div class="actions__comments">
-                                        <div class="actions__comments-icon"><img src="img/icon_comment.svg" alt="icon_comment" /></div>
-                                        <div class="actions__comments-number"><p>157</p></div>
-                                    </div>
-                                    <div class="actions__save"><img src="img/icon_save.svg" alt="icon_save" /></div>
-                                    <div class="actions__share"><img src="img/icon_share.svg" alt="icon_share" /></div>
+                                    <button class="actions__likes actions__button">
+                                        <svg class="actions__likes-icon actions__icon">
+                                            <use xlink:href="img/article_actions.svg#like"></use>
+                                        </svg>
+                                        <span class="actions__likes-number">26</span>
+                                    </button>
+
+                                    <button class="actions__comments actions__button">
+                                        <svg class="actions__comments-icon actions__icon">
+                                            <use xlink:href="img/article_actions.svg#comment"></use>
+                                        </svg>
+                                        <span class="actions__comments-number">157</span>
+                                    </button>
+
+                                    <button class="actions__save actions__button">
+                                        <svg class="actions__save-icon actions__icon">
+                                            <use xlink:href="img/article_actions.svg#save"></use>
+                                        </svg>
+                                    </button>
+
+                                    <button class="actions__share actions__button">
+                                        <svg class="actions__share-icon actions__icon">
+                                            <use xlink:href="img/article_actions.svg#share"></use>
+                                        </svg>
+                                    </button>
                                 </div>
                                 <div class="article__author">
-                                    <div class="article__author-nickname"><p>arteislamov</p></div>
-                                    <div class="article__author-lastseen"><p>arteislamov</p></div>
-                                    <div class="article__author-image"><img src="img/author_image.png" alt="author_image" /></div>
+                                    <div class="article__author-text">
+                                        <a href="" class="article__author-nickname">arteislamov</a>
+                                        <p class="article__author-lastseen">5 минут назад</p>
+                                    </div>
+                                    <div class="article__author-image">
+                                        <a href="#" class="article__author-link"><img src="img/author_image.png" alt="author_image" /></a>
+                                    </div>
                                 </div>
                             </footer>
                         </article>

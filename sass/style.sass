@@ -22,8 +22,14 @@ body
     max-width: 1200px
     margin: 0 auto
 
+
+.header__menu-item:hover
+    .header__menu-link::after
+        transform: scale(1)
+
 .header
     padding: 16px 0
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) 
     background-color: $color-header
     &__body
         display: flex
@@ -42,10 +48,21 @@ body
             &:not(:last-child)
                 margin-right: 15px
         &-link
+            position: relative
             color: $color-header-text
             text-decoration: none
             font-size: 14px
             line-height: 22px
+            &::after
+                content: ''
+                display: block
+                position: absolute
+                top: 38px
+                width: 100%
+                height: 3px
+                transform: scale(0)
+                transition: 0.5s
+                background-color: #fff            
     &__search
         border-radius: 4px
         border: 1px solid #d9d9d9
@@ -79,54 +96,90 @@ body
     &__body
         display: flex
         padding-top: 30px
-        border: 1px solid #000
 
 .articles
-    // max-width: 800px
+    flex-basis: 800px
+    margin-right: 30px
     // border: 1px solid #000
 
 .article
+    padding: 35px 35px 0 35px
     background-color: $color-article-background
-    border: 1px solid blue
+    color: $color-article-text
+    border: 1px solid #e8e8e8
 
     &__header
+        margin-bottom: 20px
         h1
-            color: $color-article-text
+            font-size: 16px
+            line-height: 24px
     &__text
+        margin-bottom: 10px
+        border: 1px solid #000
         p
-            color: $color-article-text
+            font-size: 14px
+            line-height: 22px
+            &:not(:last-child)
+                margin-bottom: 25px
     &__hashtags
+        display: flex
+        margin-bottom: 22px
+        color: #bfbfbf
         &-item
+            font-size: 14px
+            line-height: 22px
+            &:not(:last-child)
+                margin-right: 10px
 
     &__footer
         display: flex
         justify-content: space-between
+        align-items: center
         background-color: $color-article-footer-background
         border: 1px solid red
     &__actions
+    &__author
         display: flex
         border: 1px solid #000
-    &__author
-        border: 1px solid #000
+        &-text
+            border: 1px solid #000
         &-nickname
         &-lastseen
+
         &-image
-//actions и блок и элемент
-.actions
-    &__likes
-        display: flex
+            border: 1px solid #000
+            a
+                img
+
+.actions //actions и блок и элемент
+    display: flex
+    &__likes //кнопка   
         &-icon
         &-number
-    &__comments
-        display: flex
+    &__comments //кнопка
         &-icon
         &-number
     &__save
+        &-icon
     &__share
+        &-icon 
+    &__button // общий стиль для кнопок
+        display: flex
+        align-items: center
+        border: 0 
+        cursor: pointer
+        background-color: transparent
+        &:not(:last-child)
+            margin-right: 30px
+        &:focus, &:active
+            outline:  1px solid #8c8c8c 
+
+    &__icon // общий стиль для иконок
+        width: 20px
+        height: 20px
 
 .sidebar
     flex-basis: 370px
-    margin-left: 30px
     border: 1px solid
     &__navigation
     &__user
@@ -156,8 +209,9 @@ body
             p
 
     &__advert
-        &:any-link
+        &-link
             img
+                width: 10%
 
 
 @media (max-width: 1199px)
@@ -174,3 +228,18 @@ body
             &-input
             &-button
             &-icon
+
+
+
+
+
+
+
+
+
+
+
+
+.header__menu-item:hover // запрещенная вложенность для БЄМ, надо для анимации
+    .header__menu-link::after
+        transform: scale(1)

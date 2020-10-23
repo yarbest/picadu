@@ -1,0 +1,478 @@
+@media (max-width: 1280px)
+    .container
+        width: 100%
+        padding: 0 20px
+
+    .header
+        &__body
+        &__logo
+
+        &__navigation
+        &__menu
+            &-item
+                &:not(:last-child)
+            &-link
+                &::after
+                &:hover
+                    &::after
+        &__search
+            &-input
+                &::placeholder
+                &:focus
+            &-button
+                &:focus
+            &-icon
+
+    .content
+        &__body
+
+    .articles
+        &__item
+
+    .article
+
+        &__body
+
+        &__header
+            h1
+
+        &__text
+            p
+                &:not(:last-child)
+        &__hashtags
+
+            &-item
+                &:not(:last-child)
+
+        &__footer
+
+        &__actions
+        &__author
+            &-text
+
+            &-nickname
+
+            &-lastseen
+
+            &-image
+                a
+                    img
+    .actions
+        &__likes  
+            &-icon
+            &-number        
+        &__comments
+            &-icon
+            &-number
+        &__save
+            &-icon
+        &__share
+            &-icon 
+        &__button
+            &:not(:last-child)
+            &:focus, &:active
+        &__icon 
+
+    .sidebar
+        &__navigation
+        &__user
+            &-image
+            &-nickname
+                p
+            &-logout
+                &:focus
+                img
+        &__menu
+            &-item
+            &-link
+                &_active
+                &::after
+                &:hover
+                    &::after
+
+        &__publish
+            &-icon
+            &-text
+                p
+            &:focus
+        
+        &__bestcomment
+            &-body
+            &-header
+                h2
+            &-title
+                p
+            &-text
+                p
+
+        &__advert
+            &-link
+                &::after
+                img
+
+@media (max-width: 991px)
+
+    .header
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        width: 100%
+        z-index: 100
+        &__body
+        &__logo
+
+        &__navigation
+        &__menu
+            &-item
+                &:not(:last-child)
+            &-link
+                &::after
+                &:hover
+                    &::after
+        &__search
+            &-input
+                &::placeholder
+                &:focus
+            &-button
+                &:focus
+            &-icon
+        &__toggle-sidebar
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+    .content
+        margin-top: 64px
+        &__body
+            
+
+    .articles
+        flex-basis: 100%
+        margin-right: 0
+        &__item
+
+    .article
+
+        &__body
+
+        &__header
+            h1
+
+        &__text
+            p
+                &:not(:last-child)
+        &__hashtags
+
+            &-item
+                &:not(:last-child)
+
+        &__footer
+
+        &__actions
+        &__author
+            &-text
+
+            &-nickname
+
+            &-lastseen
+
+            &-image
+                a
+                    img
+    .actions
+        &__likes  
+            &-icon
+            &-number        
+        &__comments
+            &-icon
+            &-number
+        &__save
+            &-icon
+        &__share
+            &-icon 
+        &__button
+            &:not(:last-child)
+            &:focus, &:active
+        &__icon 
+
+    .sidebar
+        position: fixed
+        top: 64px
+        right: 0
+        bottom: 0
+        z-index: 101
+        height: 100%
+        max-width: 320px
+        padding: 30px
+        background-color: #fff
+        box-shadow: 1px 1px 5px black
+        transform: translateX(110%)
+        transition: 0.5s
+        overflow: auto
+        &.visible
+            transform: translateX(0)
+        &__navigation
+        &__user
+            &-image
+            &-nickname
+                p
+            &-logout
+                &:focus
+                img
+        &__menu
+            &-item
+            &-link
+                &_active
+                &::after
+                &:hover
+                    &::after
+
+        &__publish
+            &-icon
+            &-text
+                p
+            &:focus
+        
+        &__bestcomment
+            &-body
+            &-header
+                h2
+            &-title
+                p
+            &-text
+                p
+
+        &__advert
+            &-link
+                &::after
+                img
+
+@media (max-width: 767px)
+    
+    .header
+        &__body
+        &__logo
+
+        &__navigation
+            display: none
+        &__menu
+            &-item
+                &:not(:last-child)
+            &-link
+                &::after
+                &:hover
+                    &::after
+        &__search
+            &-input
+                &::placeholder
+                &:focus
+            &-button
+                &:focus
+            &-icon
+
+    .content
+        &__body
+
+    .articles
+        &__item
+
+    .article
+
+        &__body
+
+        &__header
+            h1
+
+        &__text
+            p
+                &:not(:last-child)
+        &__hashtags
+
+            &-item
+                &:not(:last-child)
+
+        &__footer
+
+        &__actions
+        &__author
+            &-text
+
+            &-nickname
+
+            &-lastseen
+
+            &-image
+                a
+                    img
+    .actions
+        &__likes  
+            &-icon
+            &-number        
+        &__comments
+            &-icon
+            &-number
+        &__save
+            &-icon
+        &__share
+            &-icon 
+        &__button
+            &:not(:last-child)
+            &:focus, &:active
+        &__icon 
+
+    .sidebar
+        &__navigation
+        &__user
+            &-image
+            &-nickname
+                p
+            &-logout
+                &:focus
+                img
+        &__menu
+            &-item
+            &-link
+                &_active
+                &::after
+                &:hover
+                    &::after
+
+        &__publish
+            &-icon
+            &-text
+                p
+            &:focus
+        
+        &__bestcomment
+            &-body
+            &-header
+                h2
+            &-title
+                p
+            &-text
+                p
+
+        &__advert
+            &-link
+                &::after
+                img
+
+@media (max-width: 480px)
+
+    .header
+        &__body
+        &__logo
+
+        &__navigation
+        &__menu
+            &-item
+                &:not(:last-child)
+            &-link
+                &::after
+                &:hover
+                    &::after
+        &__search
+            &-input
+                &::placeholder
+                &:focus
+            &-button
+                &:focus
+            &-icon
+
+    .content
+        &__body
+
+    .articles
+        &__item
+
+    .article
+
+        &__body
+
+        &__header
+            h1
+
+        &__text
+            p
+                &:not(:last-child)
+        &__hashtags
+
+            &-item
+                &:not(:last-child)
+
+        &__footer
+
+        &__actions
+        &__author
+            &-text
+
+            &-nickname
+
+            &-lastseen
+
+            &-image
+                a
+                    img
+    .actions
+        &__likes  
+            &-icon
+            &-number        
+        &__comments
+            &-icon
+            &-number
+        &__save
+            &-icon
+        &__share
+            &-icon 
+        &__button
+            &:not(:last-child)
+            &:focus, &:active
+        &__icon 
+
+    .sidebar
+        max-width: 100%
+        width: 480px
+        &__navigation
+        &__user
+            &-image
+            &-nickname
+                p
+            &-logout
+                &:focus
+                img
+        &__menu
+            &-item
+            &-link
+                &_active
+                &::after
+                &:hover
+                    &::after
+
+        &__publish
+            &-icon
+            &-text
+                p
+            &:focus
+        
+        &__bestcomment
+            &-body
+            &-header
+                h2
+            &-title
+                p
+            &-text
+                p
+
+        &__advert
+            &-link
+                &::after
+                img
+
+
+
+
+
+
+
+
+    

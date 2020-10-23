@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Picadu</title>
+        <title>Picadu - Главная</title>
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
@@ -27,6 +27,11 @@
                             <img src="img/search_icon.svg" class="header__search-icon" alt="search_icon" />
                         </button>
                     </div>
+                    <button class="header__toggle-sidebar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
             </div>
         </header>
@@ -35,36 +40,38 @@
             <div class="container">
                 <div class="content__body">
                     <main class="articles">
-                        <article class="article">
-                            <header class="article__header">
-                                <h1>Заголовок поста с интригой</h1>
-                            </header>
-                            <div class="article__text">
-                                <p>
-                                    Таким образом укрепление и развитие структуры требуют от нас анализа форм развития. Не следует, однако забывать, что
-                                    реализация намеченных плановых заданий требуют от нас анализа позиций, занимаемых участниками в отношении поставленных
-                                    задач. Задача организации, в особенности же консультация с широким активом способствует подготовки и реализации новых
-                                    предложений. Равным образом новая модель организационной деятельности позволяет оценить значение модели развития.
-                                </p>
-                                <p>
-                                    Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке
-                                    существенных финансовых и административных условий. Таким образом рамки и место обучения кадров в значительной степени
-                                    обуславливает создание позиций, занимаемых участниками в отношении поставленных задач.
-                                </p>
-                                <p>
-                                    Повседневная практика показывает, что дальнейшее развитие различных форм деятельности представляет собой интересный
-                                    эксперимент проверки форм развития. Товарищи! новая модель организационной деятельности требуют определения и уточнения форм
-                                    развития. Задача организации, в особенности же постоянный количественный рост и сфера нашей активности позволяет выполнять
-                                    важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика
-                                    показывает, что дальнейшее развитие различных форм деятельности требуют определения и уточнения соответствующий условий
-                                    активизации.
-                                </p>
-                            </div>
-                            <div class="article__hashtags">
-                                <p class="article__hashtags-item">#свежее</p>
-                                <p class="article__hashtags-item">#горячее</p>
-                                <p class="article__hashtags-item">#мое</p>
-                                <p class="article__hashtags-item">#случайность</p>
+                        <article class="article articles__item">
+                            <div class="article__body">
+                                <header class="article__header">
+                                    <h1>Заголовок поста с интригой</h1>
+                                </header>
+                                <div class="article__text">
+                                    <p>
+                                        Таким образом укрепление и развитие структуры требуют от нас анализа форм развития. Не следует, однако забывать, что
+                                        реализация намеченных плановых заданий требуют от нас анализа позиций, занимаемых участниками в отношении поставленных
+                                        задач. Задача организации, в особенности же консультация с широким активом способствует подготовки и реализации новых
+                                        предложений. Равным образом новая модель организационной деятельности позволяет оценить значение модели развития.
+                                    </p>
+                                    <p>
+                                        Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке
+                                        существенных финансовых и административных условий. Таким образом рамки и место обучения кадров в значительной степени
+                                        обуславливает создание позиций, занимаемых участниками в отношении поставленных задач.
+                                    </p>
+                                    <p>
+                                        Повседневная практика показывает, что дальнейшее развитие различных форм деятельности представляет собой интересный
+                                        эксперимент проверки форм развития. Товарищи! новая модель организационной деятельности требуют определения и уточнения
+                                        форм развития. Задача организации, в особенности же постоянный количественный рост и сфера нашей активности позволяет
+                                        выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. Повседневная
+                                        практика показывает, что дальнейшее развитие различных форм деятельности требуют определения и уточнения соответствующий
+                                        условий активизации.
+                                    </p>
+                                </div>
+                                <div class="article__hashtags">
+                                    <a href="#" class="article__hashtags-item">#свежее</a>
+                                    <a href="#" class="article__hashtags-item">#горячее</a>
+                                    <a href="#" class="article__hashtags-item">#мое</a>
+                                    <a href="#" class="article__hashtags-item">#случайность</a>
+                                </div>
                             </div>
                             <footer class="article__footer">
                                 <div class="article__actions actions">
@@ -100,48 +107,92 @@
                                         <p class="article__author-lastseen">5 минут назад</p>
                                     </div>
                                     <div class="article__author-image">
-                                        <a href="#" class="article__author-link"><img src="img/author_image.png" alt="author_image" /></a>
+                                        <a href="#" class="article__author-link"><img src="img/author_image.jpg" alt="author_image" /></a>
                                     </div>
                                 </div>
                             </footer>
                         </article>
 
-                        <!-- <article class="article">
-                            <header class="article__header">
-                                <h1></h1>
-                            </header>
-                            <div class="article__text"></div>
-                            <div class="article__hashtags">
-                                <div class="article__hashtags-item"></div>
+                        <article class="article articles__item">
+                            <div class="article__body">
+                                <header class="article__header">
+                                    <h1>Заголовок поста с интригой</h1>
+                                </header>
+                                <div class="article__text">
+                                    <p>
+                                        Таким образом укрепление и развитие структуры требуют от нас анализа форм развития. Не следует, однако забывать, что
+                                        реализация намеченных плановых заданий требуют от нас анализа позиций, занимаемых участниками в отношении поставленных
+                                        задач. Задача организации, в особенности же консультация с широким активом способствует подготовки и реализации новых
+                                        предложений. Равным образом новая модель организационной деятельности позволяет оценить значение модели развития.
+                                    </p>
+                                    <p>
+                                        Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке
+                                        существенных финансовых и административных условий. Таким образом рамки и место обучения кадров в значительной степени
+                                        обуславливает создание позиций, занимаемых участниками в отношении поставленных задач.
+                                    </p>
+                                    <p>
+                                        Повседневная практика показывает, что дальнейшее развитие различных форм деятельности представляет собой интересный
+                                        эксперимент проверки форм развития. Товарищи! новая модель организационной деятельности требуют определения и уточнения
+                                        форм развития. Задача организации, в особенности же постоянный количественный рост и сфера нашей активности позволяет
+                                        выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. Повседневная
+                                        практика показывает, что дальнейшее развитие различных форм деятельности требуют определения и уточнения соответствующий
+                                        условий активизации.
+                                    </p>
+                                </div>
+                                <div class="article__hashtags">
+                                    <a href="#" class="article__hashtags-item">#свежее</a>
+                                    <a href="#" class="article__hashtags-item">#горячее</a>
+                                    <a href="#" class="article__hashtags-item">#мое</a>
+                                    <a href="#" class="article__hashtags-item">#случайность</a>
+                                </div>
                             </div>
                             <footer class="article__footer">
                                 <div class="article__actions actions">
-                                    <div class="actions__likes">
-                                        <div class="actions__likes-icon"></div>
-                                        <div class="actions__likes-number"></div>
-                                    </div>
-                                    <div class="actions__comments">
-                                        <div class="actions__comments-icon"></div>
-                                        <div class="actions__comments-number"></div>
-                                    </div>
-                                    <div class="actions__save"></div>
-                                    <div class="actions__share"></div>
+                                    <button class="actions__likes actions__button">
+                                        <svg class="actions__likes-icon actions__icon">
+                                            <use xlink:href="img/article_actions.svg#like"></use>
+                                        </svg>
+                                        <span class="actions__likes-number">26</span>
+                                    </button>
+
+                                    <button class="actions__comments actions__button">
+                                        <svg class="actions__comments-icon actions__icon">
+                                            <use xlink:href="img/article_actions.svg#comment"></use>
+                                        </svg>
+                                        <span class="actions__comments-number">157</span>
+                                    </button>
+
+                                    <button class="actions__save actions__button">
+                                        <svg class="actions__save-icon actions__icon">
+                                            <use xlink:href="img/article_actions.svg#save"></use>
+                                        </svg>
+                                    </button>
+
+                                    <button class="actions__share actions__button">
+                                        <svg class="actions__share-icon actions__icon">
+                                            <use xlink:href="img/article_actions.svg#share"></use>
+                                        </svg>
+                                    </button>
                                 </div>
                                 <div class="article__author">
-                                    <div class="article__author-nickname"></div>
-                                    <div class="article__author-lastseen"></div>
-                                    <div class="article__author-image"></div>
+                                    <div class="article__author-text">
+                                        <a href="" class="article__author-nickname">arteislamov</a>
+                                        <p class="article__author-lastseen">5 минут назад</p>
+                                    </div>
+                                    <div class="article__author-image">
+                                        <a href="#" class="article__author-link"><img src="img/author_image.jpg" alt="author_image" /></a>
+                                    </div>
                                 </div>
                             </footer>
-                        </article> -->
+                        </article>
                     </main>
 
                     <aside class="sidebar">
                         <nav class="sidebar__navigation">
                             <div class="sidebar__user">
-                                <div class="sidebar__user-image"><img src="img/user_image.png" alt="user_image" /></div>
+                                <div class="sidebar__user-image"><img src="img/user_image.jpg" alt="user_image" /></div>
                                 <div class="sidebar__user-nickname"><p>islamovartem</p></div>
-                                <div class="sidebar__user-logout"><img src="img/logout.png" alt="logout" /></div>
+                                <button class="sidebar__user-logout"><img src="img/logout.svg" alt="logout" /></button>
                             </div>
                             <!-- /sidebar__user -->
 
@@ -150,7 +201,7 @@
                                 <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link">Комментарии</a></li>
                                 <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link">Оценки</a></li>
                                 <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link">Сохраненное</a></li>
-                                <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link">Подписки</a></li>
+                                <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link sidebar__menu-link_active">Подписки</a></li>
                                 <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link">Заметки</a></li>
                                 <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link">Игнор-лист</a></li>
                             </ul>
@@ -158,27 +209,33 @@
                         </nav>
                         <!-- /sidebar__navigation -->
 
-                        <div class="sidebar__publish">
-                            <div class="sidebar__publish-icon"><img src="img/publish_icon.png" alt="publish_icon" /></div>
+                        <button class="sidebar__publish">
+                            <div class="sidebar__publish-icon"><img src="img/publish_icon.svg" alt="publish_icon" /></div>
                             <div class="sidebar__publish-text"><p>Опубликовать пост</p></div>
-                        </div>
+                        </button>
                         <!-- /.sidebar__publish -->
 
                         <div class="sidebar__bestcomment">
                             <header class="sidebar__bestcomment-header"><h2>Комментарий дня</h2></header>
-                            <div class="sidebar__bestcomment-title"><p>Как обмануть банкомат, если вы хотите снять больше наличных</p></div>
-                            <div class="sidebar__bestcomment-text">
-                                <p>
-                                    Таким образом укрепление и развитие структуры требуют от нас анализа форм развития. Не следует, однако забывать, что
-                                    реализация намеченных плановых заданий требуют от нас анализа позиций, занимаемых участниками в отношении поставленных
-                                    задач. Задача организации, в особенности же консультация...
-                                </p>
+                            <div class="sidebar__bestcomment-body">
+                                <div class="sidebar__bestcomment-title"><p>Как обмануть банкомат, если вы хотите снять больше наличных</p></div>
+                                <div class="sidebar__bestcomment-text">
+                                    <p>
+                                        Таким образом укрепление и развитие структуры требуют от нас анализа форм развития. Не следует, однако забывать, что
+                                        реализация намеченных плановых заданий требуют от нас анализа позиций, занимаемых участниками в отношении поставленных
+                                        задач. Задача организации, в особенности же консультация... Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                        Consequuntur, similique? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita impedit facere laboriosam
+                                        assumenda. Accusamus provident saepe ea, nisi aperiam fuga nihil obcaecati!
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <!-- /.sidebar__bestcomment -->
 
                         <div class="sidebar__advert">
-                            <a href="" class="sidebar__advert-link"><img src="img/advert_image.jpg" alt="advert_image" /></a>
+                            <a href="" class="sidebar__advert-link">
+                                <img src="img/advert_image.jpg" alt="advert_image" />
+                            </a>
                         </div>
                         <!-- /.sidebar__advert -->
                     </aside>
@@ -186,5 +243,6 @@
                 </div>
             </div>
         </div>
+        <script src="js/main.js"></script>
     </body>
 </html>

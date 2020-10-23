@@ -1,3 +1,5 @@
+
+
 $color-header: #fa8c16
 $color-header-text: #fafafa
 $color-article-text: #262626
@@ -7,8 +9,17 @@ $color-article-footer-background: #fafafa
 
 
 @font-face
-    font-family: "SF Pro Display"
-    src: url("../fonts/SFProDisplay-Regular.ttf")
+    font-family: "SFProDisplay-Regular"
+    src: url("../fonts/SFProDisplay-Regular.woff") format("woff"), 
+    url("../fonts/SFProDisplay-Regular.woff2") format("woff2")
+    font-weight: normal
+
+@font-face
+    font-family: "SFProDisplay-Semibold"
+    src: url("../fonts/SFProDisplay-Semibold.woff") format("woff"),
+    url("../fonts/SFProDisplay-Semibold.woff2") format("woff2")
+    font-weight: bold
+
 
 *
     margin: 0
@@ -16,16 +27,12 @@ $color-article-footer-background: #fafafa
     box-sizing: border-box
 
 body
-    font-family: "SF Pro Display", sans-serif
+    font-family: "SFProDisplay-Regular", sans-serif
 
 .container
     max-width: 1200px
     margin: 0 auto
 
-
-.header__menu-item:hover
-    .header__menu-link::after
-        transform: scale(1)
 
 .header
     padding: 16px 0
@@ -62,7 +69,10 @@ body
                 height: 3px
                 transform: scale(0)
                 transition: 0.5s
-                background-color: #fff            
+                background-color: #fff   
+            &:hover
+                &::after
+                    transform: scale(1)         
     &__search
         border-radius: 4px
         border: 1px solid #d9d9d9
@@ -87,9 +97,25 @@ body
             background-color: #fff
             border: none
             border-radius: 4px //хоть рамки и не видно, мы все равно закрулгяем кнопку, а то углы вылазят
+            cursor: pointer
             &:focus
                 outline: 1px solid #bfbfbf
         &-icon
+    
+    &__toggle-sidebar
+        display: none
+        margin-left: 15px
+        width: 30px
+        height: 20px
+        border: none
+        background-color: transparent
+        &:focus
+            outline: none
+        span
+            display: block
+            width: 100%
+            height: 2px
+            background-color: #fff
 
 .content
     background-color: $color-content-background
@@ -100,22 +126,26 @@ body
 .articles
     flex-basis: 800px
     margin-right: 30px
-    // border: 1px solid #000
-
+    &__item
+        margin-bottom: 30px //оттолкнули слудующую статью, не от блока article, 
+        //а от элемента articles__item
+        //хоть это и один и тот же элемент, но блокам нельзя внешние параметры задавать
 .article
-    padding: 35px 35px 0 35px
     background-color: $color-article-background
     color: $color-article-text
     border: 1px solid #e8e8e8
-
+    &__body
+        margin-bottom: 22px
+        padding: 35px 35px 0 35px
     &__header
         margin-bottom: 20px
         h1
+            font-family: "SFProDisplay-Semibold"
+            font-weight: 700
             font-size: 16px
             line-height: 24px
     &__text
         margin-bottom: 10px
-        border: 1px solid #000
         p
             font-size: 14px
             line-height: 22px
@@ -123,41 +153,60 @@ body
                 margin-bottom: 25px
     &__hashtags
         display: flex
-        margin-bottom: 22px
-        color: #bfbfbf
+        flex-wrap: wrap
         &-item
             font-size: 14px
             line-height: 22px
+            text-decoration: none
+            color: #bfbfbf
             &:not(:last-child)
                 margin-right: 10px
 
     &__footer
         display: flex
         justify-content: space-between
-        align-items: center
+        padding: 13px 35px
+        border-top: 1px solid #e8e8e8
         background-color: $color-article-footer-background
-        border: 1px solid red
     &__actions
     &__author
         display: flex
-        border: 1px solid #000
         &-text
-            border: 1px solid #000
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+            margin-right: 9px
+            font-size: 12px
+            line-height: 20px
         &-nickname
+            text-align: left
+            text-decoration: none           
+            color: #8c8c8c
         &-lastseen
+            color: #bfbfbf
 
         &-image
-            border: 1px solid #000
+            display: flex
+            align-items: center             
             a
+                display: flex
+                align-items: center 
                 img
+                    width: 34px
+                    height: 34px
+                    border-radius: 4px
 
 .actions //actions и блок и элемент
     display: flex
-    &__likes //кнопка   
+    flex-wrap: wrap
+    align-items: center
+    &__likes //кнопка  
         &-icon
-        &-number
+            margin-right: 7px
+        &-number        
     &__comments //кнопка
         &-icon
+            margin-right: 7px
         &-number
     &__save
         &-icon
@@ -166,80 +215,161 @@ body
     &__button // общий стиль для кнопок
         display: flex
         align-items: center
+        padding: 1px
         border: 0 
         cursor: pointer
         background-color: transparent
+        color: #8c8c8c
+        font-size: 14px
+        line-height: 22px
         &:not(:last-child)
             margin-right: 30px
         &:focus, &:active
             outline:  1px solid #8c8c8c 
 
-    &__icon // общий стиль для иконок
+    &__icon // общий стиль для иконок в кнопках
         width: 20px
         height: 20px
 
 .sidebar
     flex-basis: 370px
-    border: 1px solid
+    
     &__navigation
+        margin-bottom: 30px
+        border: 1px solid #e8e8e8
     &__user
+        display: flex
+        align-items: center
+        padding: 15px 25px
+        border-bottom: 1px solid #e8e8e8
+        background-color: #fafafa
         &-image
+            margin-right: 17px
             img
+                width: 40px
+                height: 40px
+                border-radius: 50% 
         &-nickname
+            margin-right: auto
             p
+                font-size: 16px
+                font-family: "SFProDisplay-Semibold"
+                line-height: 24px
         &-logout
+            display: flex
+            background-color: transparent
+            border: none
+            cursor: pointer
+            &:focus
+                outline: 1px solid #bfbfbf
             img
     &__menu
         list-style: none
         &-item
+            display: flex            
         &-link
+            position: relative
+            width: 100%
+            padding: 16px 0 16px 48px
+            font-size: 14px
+            line-height: 22px
+            text-decoration: none
+            background-color: #fff
+            color: #595959
+            &_active
+                background-color: #fffbe6
+                color: #faad14
+            &::after
+                content: ''
+                display: block
+                position: absolute
+                right: 0
+                top: 0
+                height: 100%
+                width: 3px
+                transform: scale(0)
+                transition: 0.5s
+                background-color: #faad14
+            &:hover
+                &::after
+                    transform: scale(1)
+                color: #faad14
+                background-color: #fffbe6
 
     &__publish
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 20px
+        width: 100%
+        padding: 13px
+        border-radius: 4px
+        background-color: #faad14
+        border: none
+        cursor: pointer
         &-icon
+            margin-right: 6px
             img
         &-text
             p
+                color: white
+                font-size: 16px
+                line-height: 24px
+                text-align: center
+        &:focus
+            outline: 1px solid #bfbfbf
     
     &__bestcomment
+        margin-bottom: 20px
+        border: 1px solid #e8e8e8
+        background-color: #ffffff
+        &-body
+            padding: 23px 25px 30px 25px
         &-header
+            padding: 23px 0 23px 25px
+            background-color: #fafafa
+            border-bottom: 1px solid #e8e8e8
             h2
+                font-family: "SFProDisplay-Semibold"
+                color: #595959
+                font-size: 16px
+                line-height: 24px
         &-title
+            margin-bottom: 10px
             p
+                color: #faad14
+                font-size: 16px
+                font-family: "SFProDisplay-Semibold"
+                line-height: 24px
         &-text
             p
+                height: 180px
+                color: #262626
+                font-size: 14px
+                line-height: 22px
+                overflow: auto
 
     &__advert
         &-link
+            position: relative
+            display: block
+            &::after
+                content: 'Реклама'
+                position: absolute
+                display: block
+                top: 0
+                right: 0
+                width: 100px
+                height: 21px
+                background-color: #c4c4c4
+                color: #ffffff
+                font-size: 12px
+                line-height: 20px  
+                text-align: center  
             img
-                width: 10%
-
-
-@media (max-width: 1199px)
-    .header
-        &__body
-        &__logo
-            a
-                img
-        &__navigation
-        &__menu
-            &-item
-            &-link
-        &__search
-            &-input
-            &-button
-            &-icon
+                // display: block
+                width: 100%
 
 
 
-
-
-
-
-
-
-
-
-
-.header__menu-item:hover // запрещенная вложенность для БЄМ, надо для анимации
-    .header__menu-link::after
-        transform: scale(1)
+@import media

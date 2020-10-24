@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Picadu - Главная</title>
+        <link rel="stylesheet" href="css/normalize.css" />
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
@@ -11,7 +12,11 @@
             <div class="container">
                 <div class="header__body">
                     <div class="header__logo">
-                        <a href="/"><img src="img/pikadu_logo.svg" alt="Logo" /></a>
+                        <a href="/" class="header__logo-link">
+                            <svg class="header__logo-icon">
+                                <use xlink:href="img/icons.svg#logo"></use>
+                            </svg>
+                        </a>
                     </div>
                     <nav class="header__navigation">
                         <ul class="header__menu">
@@ -23,11 +28,13 @@
                     </nav>
                     <div class="header__search">
                         <input type="search" class="header__search-input" placeholder="Поиск по сайту" />
-                        <button class="header__search-button">
-                            <img src="img/search_icon.svg" class="header__search-icon" alt="search_icon" />
+                        <button class="header__search-button btn">
+                            <svg class="header__search-icon">
+                                <use xlink:href="img/icons.svg#search"></use>
+                            </svg>
                         </button>
                     </div>
-                    <button class="header__toggle-sidebar">
+                    <button class="header__toggle-sidebar btn">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -75,29 +82,29 @@
                             </div>
                             <footer class="article__footer">
                                 <div class="article__actions actions">
-                                    <button class="actions__likes actions__button">
+                                    <button class="actions__likes actions__button btn">
                                         <svg class="actions__likes-icon actions__icon">
-                                            <use xlink:href="img/article_actions.svg#like"></use>
+                                            <use xlink:href="img/icons.svg#like"></use>
                                         </svg>
                                         <span class="actions__likes-number">26</span>
                                     </button>
 
-                                    <button class="actions__comments actions__button">
+                                    <button class="actions__comments actions__button btn">
                                         <svg class="actions__comments-icon actions__icon">
-                                            <use xlink:href="img/article_actions.svg#comment"></use>
+                                            <use xlink:href="img/icons.svg#comment"></use>
                                         </svg>
                                         <span class="actions__comments-number">157</span>
                                     </button>
 
-                                    <button class="actions__save actions__button">
+                                    <button class="actions__save actions__button btn">
                                         <svg class="actions__save-icon actions__icon">
-                                            <use xlink:href="img/article_actions.svg#save"></use>
+                                            <use xlink:href="img/icons.svg#save"></use>
                                         </svg>
                                     </button>
 
-                                    <button class="actions__share actions__button">
+                                    <button class="actions__share actions__button btn">
                                         <svg class="actions__share-icon actions__icon">
-                                            <use xlink:href="img/article_actions.svg#share"></use>
+                                            <use xlink:href="img/icons.svg#share"></use>
                                         </svg>
                                     </button>
                                 </div>
@@ -148,29 +155,29 @@
                             </div>
                             <footer class="article__footer">
                                 <div class="article__actions actions">
-                                    <button class="actions__likes actions__button">
+                                    <button class="actions__likes actions__button btn">
                                         <svg class="actions__likes-icon actions__icon">
-                                            <use xlink:href="img/article_actions.svg#like"></use>
+                                            <use xlink:href="img/icons.svg#like"></use>
                                         </svg>
                                         <span class="actions__likes-number">26</span>
                                     </button>
 
-                                    <button class="actions__comments actions__button">
+                                    <button class="actions__comments actions__button btn">
                                         <svg class="actions__comments-icon actions__icon">
-                                            <use xlink:href="img/article_actions.svg#comment"></use>
+                                            <use xlink:href="img/icons.svg#comment"></use>
                                         </svg>
                                         <span class="actions__comments-number">157</span>
                                     </button>
 
-                                    <button class="actions__save actions__button">
+                                    <button class="actions__save actions__button btn">
                                         <svg class="actions__save-icon actions__icon">
-                                            <use xlink:href="img/article_actions.svg#save"></use>
+                                            <use xlink:href="img/icons.svg#save"></use>
                                         </svg>
                                     </button>
 
-                                    <button class="actions__share actions__button">
+                                    <button class="actions__share actions__button btn">
                                         <svg class="actions__share-icon actions__icon">
-                                            <use xlink:href="img/article_actions.svg#share"></use>
+                                            <use xlink:href="img/icons.svg#share"></use>
                                         </svg>
                                     </button>
                                 </div>
@@ -192,7 +199,11 @@
                             <div class="sidebar__user">
                                 <div class="sidebar__user-image"><img src="img/user_image.jpg" alt="user_image" /></div>
                                 <div class="sidebar__user-nickname"><p>islamovartem</p></div>
-                                <button class="sidebar__user-logout"><img src="img/logout.svg" alt="logout" /></button>
+                                <button class="sidebar__user-logout btn">
+                                    <svg class="sidebar__user-logout-icon">
+                                        <use xlink:href="img/icons.svg#logout"></use>
+                                    </svg>
+                                </button>
                             </div>
                             <!-- /sidebar__user -->
 
@@ -209,8 +220,10 @@
                         </nav>
                         <!-- /sidebar__navigation -->
 
-                        <button class="sidebar__publish" onclick="window.location.href='new-post.html'">
-                            <div class="sidebar__publish-icon"><img src="img/publish_icon.svg" alt="publish_icon" /></div>
+                        <button class="sidebar__publish btn" onclick="window.location.href='new-post.html'">
+                            <svg class="sidebar__publish-icon">
+                                <use xlink:href="img/icons.svg#publish"></use>
+                            </svg>
                             <div class="sidebar__publish-text"><p>Опубликовать пост</p></div>
                         </button>
                         <!-- /.sidebar__publish -->

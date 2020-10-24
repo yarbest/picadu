@@ -4,14 +4,19 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Picadu - Добавить пост</title>
-        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/new_post.css" />
     </head>
     <body>
         <header class="header">
             <div class="container">
                 <div class="header__body">
                     <div class="header__logo">
-                        <a href="/"><img src="img/pikadu_logo.svg" alt="Logo" /></a>
+                        <a href="/" class="header__logo-link">
+                            <svg class="header__logo-icon">
+                                <use xlink:href="img/icons.svg#logo"></use>
+                            </svg>
+                        </a>
                     </div>
                     <nav class="header__navigation">
                         <ul class="header__menu">
@@ -24,7 +29,9 @@
                     <div class="header__search">
                         <input type="search" class="header__search-input" placeholder="Поиск по сайту" />
                         <button class="header__search-button">
-                            <img src="img/search_icon.svg" class="header__search-icon" alt="search_icon" />
+                            <svg class="header__search-icon">
+                                <use xlink:href="img/icons.svg#search"></use>
+                            </svg>
                         </button>
                     </div>
                     <button class="header__toggle-sidebar">
@@ -35,15 +42,33 @@
                 </div>
             </div>
         </header>
-
         <div class="content">
             <div class="container">
                 <div class="content__body">
                     <main class="new-post">
                         <form action="#" class="new-post__form form">
-                            <input type="text" name="title" class="form__add-title" />
-                            <textarea name="text" id="text" class="form__add-text"></textarea>
-                            <button type="submit" class="form__button button"></button>
+                            <input type="text" name="title" class="form__add-title" placeholder="Заголовок поста" />
+                            <textarea name="text" id="text" class="form__add-text" placeholder="Текст вашего поста"></textarea>
+                            <div class="form__buttons">
+                                <button type="submit" class="form__publish button">
+                                    <svg class="form__publish-icon form__icon">
+                                        <use xlink:href="img/icons.svg#publish"></use>
+                                    </svg>
+                                    <p>Опубликовать пост</p>
+                                </button>
+                                <button type="file" class="form__video button">
+                                    <svg class="form__video-icon form__icon">
+                                        <use xlink:href="img/icons.svg#video"></use>
+                                    </svg>
+                                    <p>Видео</p>
+                                </button>
+                                <button type="file" class="form__photo button">
+                                    <svg class="form__photo-icon form__icon">
+                                        <use xlink:href="img/icons.svg#photo"></use>
+                                    </svg>
+                                    <p>Фото</p>
+                                </button>
+                            </div>
                         </form>
                     </main>
 

@@ -1,10 +1,8 @@
 @import common/fonts
 @import common/variables
-@import common/header
+@import common/header  
 @import common/sidebar
 
-@import media/media_common
-@import media/media_new_post
 
 
 *
@@ -21,6 +19,9 @@ body
 
 .content
     background-color: $color-content-background
+    // height: auto
+    // height: 100vh
+    border: 1px solid #000
     &__body
         display: flex
         padding-top: 30px
@@ -31,37 +32,56 @@ body
     border: 0 
     cursor: pointer
     background-color: transparent
-    &:focus, &:active
-        outline:  1px solid #8c8c8c 
-
-.content
-    &__body
 
 .new-post
+    border: 1px solid #000
     flex-basis: 800px
     margin-right: 30px
     &__form
 
 .form
-    border: 1px solid red
+    font-size: 16px
+    
     &__add-title
-        // max-width: 100%
         min-width: 100%
+        margin-bottom: 16px
+        padding: 25px 31px 25px 31px
+        border: 1px solid #e8e8e8
+        font-size: 16px
+        font-weight: 600
+        color: #000000
+        &::placeholder
+            font-size: 16px
+            font-weight: 600
+            color: #000000
+
     &__add-text
-        // max-width: 100%
         min-width: 100%
-        resize: none
         min-height: 362px
+        margin-bottom: 30px
+        padding: 23px 31px
+        resize: none
+        border: 1px solid #e8e8e8
+        font-size: 14px
+        color: #595959
+        &::placeholder
+            font-size: 14px
+            color: #595959
 
     &__buttons
-        border: 1px solid #000
-        display: inline-flex
-        *
-            border: 1px solid #000
+        display: flex
+
+
     &__publish
+        display: flex
+        justify-content: center
+        flex-basis: 370px
+        padding: 13px 0
         margin-right: 36px
+        line-height: 24px
         border-radius: 4px
         background-color: #faad14
+        color: #fff
         &-icon
             margin-right: 6px
             fill: #fff
@@ -69,21 +89,38 @@ body
             height: 14px
         p
     &__video
+        display: flex
+        flex-basis: 125px
         margin-right: 12px
+        padding: 13px 16px
         border-radius: 4px
         border: 1px solid #ffc53d
         background-color: #ffffff
+        line-height: 24px
+        color: #ffc53d
         &-icon
+            margin-right: 5px
             fill: #ffc53d
             width: 14px
             height: 12px
         p
+            flex-grow: 1
     &__photo
+        flex-basis: 125px
+        padding: 13px 16px
         border-radius: 4px
         border: 1px solid #ffc53d
         background-color: #ffffff
+        line-height: 24px
+        color: #ffc53d
         &-icon
+            margin-right: 5px
             fill: #ffc53d
             width: 14px
             height: 12px
         p
+            flex-grow: 1
+
+
+@import media/media_common
+@import media/media_new_post

@@ -1,5 +1,5 @@
 //Медиа запросы, для общих элементов для разных страниц. Такие как header, sidebar, footer
-
+@import ../common/variables
 
 @media (max-width: 1280px)
     .container
@@ -77,17 +77,39 @@
         z-index: 100
         &__body
         &__logo
+        &__toggle-navigation
+            display: flex
+            align-items: center
+            margin-right: auto
 
         &__navigation
+            border: 1px solid #000
+            transform: translatex(-200%)
+            z-index: 0
+            transition: 0.2s
+            position: absolute
+            top: 66px
+            left: 0px
+            
+            &.visible-navigation
+                transform: translateX(0)
+                background-color: #fff
+
         &__menu
+            display: flex
+            flex-direction: column
             &-item
+                padding: 20px
+                border: 1px solid #000
                 &:not(:last-child)
             &-link
+                color: #fa8c16
                 &::after
                 &:hover
                     &::after
         &__search
             &-input
+                width: 50%
                 &::placeholder
                 &:focus
             &-button
@@ -104,7 +126,7 @@
             
     .sidebar
         position: fixed
-        top: 64px
+        top: 66px
         right: 0
         bottom: 0
         z-index: 101
@@ -112,7 +134,7 @@
         max-width: 320px
         padding: 30px
         background-color: #fff
-        box-shadow: 1px 1px 5px black
+        box-shadow: 1px 1px 10px -2px
         transform: translateX(110%)
         transition: 0.5s
         overflow: auto
@@ -160,7 +182,6 @@
         &__body
             justify-content: space-between
         &__logo
-            margin-right: auto
         &__navigation
         &__menu
             &-item

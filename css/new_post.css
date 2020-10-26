@@ -770,4 +770,21 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .form__publish {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .form__video {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .form__photo {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
 }

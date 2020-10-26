@@ -69,6 +69,9 @@
 @media (max-width: 991px)
 
     .header
+        display: flex
+        align-items: center
+        height: 66px
         position: fixed
         top: 0
         left: 0
@@ -76,6 +79,7 @@
         width: 100%
         z-index: 100
         &__body
+            position: relative
         &__logo
             margin-right: 20px
         &__toggle-navigation
@@ -84,28 +88,31 @@
             margin-right: auto
 
         &__navigation
-            border: 1px solid #000
-            height: 0
-            z-index: 0
-            transition: 0.2s
+            // height: 0
+            width: 100%
+            transform: translateY(-200%)
+            transition: transform  1s
             position: absolute
-            top: 66px
-            left: 91px
+            top: 49px
             overflow: hidden
+            box-shadow: 0 0 5px  #e7810cbd
             &.visible-navigation
-                height: auto
+                // height: auto
+                transform: translateY(0)
+                
                 background-color: #fff
 
         &__menu
             display: flex
             flex-direction: column
             &-item
-                border: 1px solid #000
+                
                 &:not(:last-child)
             &-link
+                box-shadow: 0 0 5px #e7810c77
                 display: block
                 text-align: center
-                padding: 20px
+                padding: 15px
                 color: #fa8c16
                 &::after
                 &:hover
@@ -123,10 +130,11 @@
             flex-direction: column
             justify-content: space-between
     .content
-        margin-top: 64px
-        padding-bottom: 30px
+
         &__body
-            
+            padding-bottom: 30px  
+            padding-top: 90px
+      
     .sidebar
         position: fixed
         top: 66px
@@ -137,7 +145,7 @@
         max-width: 320px
         padding: 30px
         background-color: #fff
-        box-shadow: 1px 1px 10px -2px
+        box-shadow: 0 0 10px -5px
         transform: translateX(110%)
         transition: 0.5s
         overflow: auto
@@ -251,9 +259,10 @@
         &__body
             
         &__logo
-            
-
+        &__toggle-navigation    
         &__navigation
+            top: 46px
+
         &__menu
             &-item
                 &:not(:last-child)
@@ -262,6 +271,7 @@
                 &:hover
                     &::after
         &__search
+            display: none
             &-input
                 &::placeholder
                 &:focus
@@ -273,6 +283,7 @@
         &__body
 
     .sidebar
+        top: 66px
         max-width: 100%
         width: 480px
         &__navigation

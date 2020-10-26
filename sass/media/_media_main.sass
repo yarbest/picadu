@@ -171,8 +171,8 @@
         &__item
 
     .article
-
         &__body
+            padding: 20px
 
         &__header
             h1
@@ -181,20 +181,18 @@
             p
                 &:not(:last-child)
         &__hashtags
-
             &-item
                 &:not(:last-child)
 
         &__footer
-
+            padding: 20px
         &__actions
+            
         &__author
             &-text
-
             &-nickname
-
             &-lastseen
-
+                text-align: right
             &-image
                 a
                     img
@@ -211,10 +209,70 @@
             &-icon 
         &__button
             &:not(:last-child)
+                margin-right: 10px
             &:focus, &:active
         &__icon 
 
+@media (max-width: 360px)
 
+    .content
+        &__body
+
+    .articles
+        &__item
+
+    .article
+        &__body
+            padding: 15px
+        &__header
+            h1
+
+        &__text
+            p
+                &:not(:last-child)
+        &__hashtags
+
+            &-item
+                &:not(:last-child)
+
+        &__footer
+            flex-wrap: wrap
+            padding: 15px
+
+        &__actions
+            // border: 1px solid #000
+            margin-bottom: 0
+            
+            
+        &__author
+            // flex-grow: 1
+            // justify-content: flex-end
+            &-text
+                justify-content: center
+            &-nickname
+            &-lastseen
+            &-image
+                a
+                    img
+    .actions
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 10px
+        &__likes  
+            &-icon
+            &-number        
+        &__comments
+            &-icon
+            &-number
+        &__save
+            &-icon
+        &__share
+            &-icon 
+        &__button
+            &:not(:last-child)
+                margin-right: 0
+            &:focus, &:active
+        &__icon 
 
 
 

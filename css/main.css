@@ -834,7 +834,8 @@ body {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
   }
   .actions__comments {
     -ms-grid-row: 2;

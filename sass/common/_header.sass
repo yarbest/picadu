@@ -34,7 +34,7 @@
             width: 14px
             height: 14px
         span
-            margin-right: 5px
+            // margin-right: 5px
 
     &__navigation
         flex-basis: 255px
@@ -101,10 +101,12 @@
     
     &__toggle-sidebar
         display: none
-        margin-left: 20px
+        // margin-left: 20px
         width: 60px
         border: none
         background-color: transparent
+        &.active
+            transform: rotate(180deg)
         &:focus
             outline: none
         span

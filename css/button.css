@@ -1,46 +1,66 @@
-.ham {
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-    transition: transform 400ms;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+.visuallyHidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
 }
-.hamRotate.active {
+
+.hamburger {
+    /* margin: 0 auto; */
+    margin-left: 20px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.hamburger .bar {
+    padding: 0;
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    display: block;
+    border-radius: 4px;
+    transition: all 0.4s ease-in-out;
+    position: absolute;
+}
+
+.bar1 {
+    top: 2px;
+}
+
+.bar2,
+.bar3 {
+    top: 13.5px;
+}
+
+.bar3 {
+    right: 0;
+}
+
+.bar4 {
+    bottom: 0px;
+}
+
+/* HAMBURGER 2 */
+
+.checkbox2:checked + label > .hamburger2 > .bar1 {
+    transform: translateX(40px);
+    background-color: transparent;
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar2 {
     transform: rotate(45deg);
 }
-.hamRotate180.active {
-    transform: rotate(180deg);
+
+.checkbox2:checked + label > .hamburger2 > .bar3 {
+    transform: rotate(-45deg);
 }
-.line {
-    fill: none;
-    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-    stroke: #fff;
-    stroke-width: 5.5;
-    stroke-linecap: round;
-}
-.ham1 .top {
-    stroke-dasharray: 40 139;
-}
-.ham1 .bottom {
-    stroke-dasharray: 40 180;
-}
-.ham1.active .top {
-    stroke-dashoffset: -98px;
-}
-.ham1.active .bottom {
-    stroke-dashoffset: -138px;
-}
-.ham2 .top {
-    stroke-dasharray: 40 121;
-}
-.ham2 .bottom {
-    stroke-dasharray: 40 121;
-}
-.ham2.active .top {
-    stroke-dashoffset: -102px;
-}
-.ham2.active .bottom {
-    stroke-dashoffset: -102px;
+
+.checkbox2:checked + label > .hamburger2 > .bar4 {
+    transform: translateX(-40px);
+    background-color: transparent;
 }

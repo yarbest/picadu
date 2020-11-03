@@ -186,8 +186,7 @@
 .header__toggle-sidebar {
   display: none;
   margin-left: 20px;
-  width: 30px;
-  height: 20px;
+  width: 60px;
   border: none;
   background-color: transparent;
 }
@@ -654,7 +653,7 @@ body {
     transition: transform  0.5s;
     transition: transform  0.5s, -webkit-transform  0.5s;
     position: absolute;
-    top: 49px;
+    top: 64px;
     overflow: hidden;
     -webkit-box-shadow: 0 0 5px  #e7810cbd;
             box-shadow: 0 0 5px  #e7810cbd;
@@ -738,7 +737,7 @@ body {
 
 @media (max-width: 480px) {
   .header__navigation {
-    top: 46px;
+    top: 64px;
   }
   .header__search {
     display: none;

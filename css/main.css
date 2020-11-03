@@ -65,6 +65,10 @@
   height: 14px;
 }
 
+.header__toggle-navigation span {
+  margin-right: 5px;
+}
+
 .header__navigation {
   -ms-flex-preferred-size: 255px;
       flex-basis: 255px;

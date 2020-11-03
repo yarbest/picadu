@@ -190,23 +190,6 @@
   background-color: transparent;
 }
 
-.header__toggle-sidebar.active {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.header__toggle-sidebar:focus {
-  outline: none;
-}
-
-.header__toggle-sidebar span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #fff;
-}
-
 .sidebar {
   -ms-flex-preferred-size: 370px;
       flex-basis: 370px;
